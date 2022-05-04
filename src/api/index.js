@@ -1,6 +1,12 @@
 import { Router } from 'express'
+import book from './book'
+import salesforce from "./salesforce";
 
 const router = new Router()
+
+router.use('/books', book)
+
+router.use('/salesforce', salesforce)
 
 /**
  * @apiDefine master Master access only

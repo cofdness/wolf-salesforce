@@ -33,12 +33,16 @@ const config = {
         useNewUrlParser: true,
         useCreateIndex: true
       }
-    }
+    },
+    salesforceUser: requireProcessEnv('SALESFORCE_USER'),
+    salesforcePassword: requireProcessEnv('SALESFORCE_PASSWORD'),
+    salesforceClientId: requireProcessEnv('SALESFORCE_CLIENT_ID'),
+    salesforceClientSecret: requireProcessEnv('SALESFORCE_CLIENT_SECRET')
   },
   test: { },
   development: {
     mongo: {
-      uri: 'mongodb://localhost/wolf-salesforce-dev',
+      uri: 'mongodb+srv://phungAdmin:yswnZfH6dyaPSVh5@locallib.fttrc.mongodb.net/local_library?authSource=admin&replicaSet=atlas-1p3w7f-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true',
       options: {
         debug: true
       }
