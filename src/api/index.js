@@ -1,12 +1,15 @@
 import { Router } from 'express'
-import book from './book'
 import salesforce from "./salesforce";
+// import book from "./book"
+import customer from './customer'
+import zaloUser from './zaloUser'
 
 const router = new Router()
 
-router.use('/books', book)
-
 router.use('/salesforce', salesforce)
+// router.use('/book', book)
+router.use('/customers', customer)
+router.use('/zaloUsers', zaloUser)
 
 /**
  * @apiDefine master Master access only
